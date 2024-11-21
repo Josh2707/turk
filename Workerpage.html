@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worker Dashboard</title>
+  <style>
+    /* General Body Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    /* Header Styling */
+    header {
+      background-color: #005596;
+      color: #fff;
+      padding: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 50px;
+      width: auto;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #004080;
+      padding: 0.5em;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 1em;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Container Styling */
+    .container {
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 2em;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container h2 {
+      font-size: 1.8em;
+      color: #005596;
+      margin-bottom: 1em;
+    }
+
+    .info-box {
+      padding: 1em;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      margin-bottom: 1em;
+    }
+
+    .info-box strong {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="https://cdn.shopify.com/s/files/1/0030/9441/3401/files/CSS-Logo.png?v=1637859509" alt="CSS Logo">
+    <h1>Worker Dashboard</h1>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="tasks.html">Tasks</a>
+    <a href="settings.html">Settings</a>
+    <a href="logout.html">Logout</a>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h2>Welcome to Your Worker Dashboard</h2>
+    <div id="workerInfo" class="info-box">
+      <!-- Worker information will be dynamically loaded here -->
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Retrieve and display worker data
+    const userData = JSON.parse(localStorage.getItem('userData'));
+    const workerInfo = document.getElementById('workerInfo');
+
+    if (userData && userData.role === 'worker') {
+      workerInfo.innerHTML = `
+        <p><strong>Name:</strong> ${userData.name}</p>
+        <p><strong>Salary:</strong> $${userData.salary}</p>
+        <p><strong>Tasks Completed:</strong> ${userData.tasksCompleted || 0}</p>
+      `;
+    } else {
+      workerInfo.innerHTML = '<p>No worker data found. Please log in as a worker.</p>';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UWindsor AMT Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #005596;
+      color: #fff;
+      padding: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 50px;
+      width: auto;
+      margin-right: 1em;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 1em;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .section {
+      padding: 1em;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 1em;
+    }
+
+    .section h2 {
+      color: #005596;
+      margin-top: 0;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.5em 1em;
+      margin: 0.5em 0;
+      color: #fff;
+      background-color: #005596;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background-color: #003d73;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="https://cdn.shopify.com/s/files/1/0030/9441/3401/files/CSS-Logo.png?v=1637859509" alt="CSS Logo">
+    <h1>UWindsor AMT Portal</h1>
+  </header>
+
+  <!-- Main Content Container -->
+  <div class="container">
+    
+    <!-- About Section -->
+    <section id="about" class="section">
+      <h2>About UWindsor AMT Project</h2>
+      <p>Inspired by Amazon Mechanical Turk (AMT), the UWindsor AMT Project is a specialized platform designed for UWindsor’s Computer Science (CS) department. Amazon Mechanical Turk enables companies and researchers to break down complex projects into smaller, manageable tasks called Human Intelligence Tasks (HITs). Workers on the platform can then complete these HITs, earning compensation for their contributions, while clients gain access to scalable human effort for data processing and research needs.</p>
+      <p>With the UWindsor AMT Project, we aim to create a UWindsor CS edition specifically for students, faculty, and staff. This platform allows eligible UWindsor students to work on projects assigned by clients within the department, developing skills and earning experience. It also provides clients a streamlined way to post and manage tasks, enhancing research and project workflows within the university.</p>
+    </section>
+
+    <!-- Worker Section -->
+    <section id="worker" class="section">
+      <h2>For Workers</h2>
+      <p>If you are a UWindsor student or employee looking to participate in tasks, click below to access your dashboard.</p>
+      <a href="Workerpage.html" class="button">Go to Worker Dashboard</a>
+    </section>
+
+    <!-- Client Section -->
+    <section id="client" class="section">
+      <h2>For Clients</h2>
+      <p>If you are a project client looking to add tasks or manage current tasks for students and staff, access the client portal here.</p>
+      <a href="Clientpage.html" class="button">Go to Client Dashboard</a>
+    </section>
+
+    <!-- New User Section -->
+    <section id="new-user" class="section">
+      <h2>For New Users</h2>
+      <p>If you are a new user, access the form portal here.</p>
+      <a href="Formpage.html" class="button">Go to Formpage</a>
+    </section>
+  </div>
+</body>
+</html>
